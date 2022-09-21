@@ -197,8 +197,7 @@ class RecyclerViewManager(
     }
 
     val isShowDoneButton: Boolean
-        get() = (!isDisplayingFolderView
-            && (imageAdapter.selectedImages.isNotEmpty() || config.showDoneButtonAlways)
+        get() = ((imageAdapter.selectedImages.isNotEmpty() || config.showDoneButtonAlways)
             && config.returnMode !== ReturnMode.ALL && config.returnMode !== ReturnMode.GALLERY_ONLY)
 
 }
