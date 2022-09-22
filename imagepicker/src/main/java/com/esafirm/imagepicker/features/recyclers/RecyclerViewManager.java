@@ -119,9 +119,9 @@ public class RecyclerViewManager {
     }
 
     public String getTitle() {
-        if (isDisplayingFolderView()) {
-            return ConfigUtils.getFolderTitle(context, config);
-        }
+//        if (isDisplayingFolderView()) {
+//            return ConfigUtils.getFolderTitle(context, config);
+//        }
 
         if (config.getMode() == MODE_SINGLE) {
             return ConfigUtils.getImageTitle(context, config);
@@ -190,8 +190,7 @@ public class RecyclerViewManager {
     }
 
     public boolean isShowDoneButton() {
-        return !isDisplayingFolderView()
-                && !imageAdapter.getSelectedImages().isEmpty()
+        return !imageAdapter.getSelectedImages().isEmpty()
                 && (config.getReturnMode() != ReturnMode.ALL && config.getReturnMode() != ReturnMode.GALLERY_ONLY);
     }
 
